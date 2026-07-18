@@ -319,6 +319,9 @@ export function renderLabStudy(container, programId) {
     });
   });
 
+  // Render the initial tab content immediately on page load
+  renderStudyTab();
+
   // --- Monaco Editor Initialization ---
   let initialCodeValue = localStorage.getItem(`lab_code_${program.id}`) || program.code;
 
